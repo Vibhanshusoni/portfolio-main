@@ -323,3 +323,19 @@ body.dark-mode .tech-item:hover{
 @media(max-width:500px){
   .tech-grid{ grid-template-columns: repeat(1, 1fr); }
 }
+/* LeetCode Icon (same style as FontAwesome icons) */
+.fa-leetcode {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png');
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+/* Dark mode: white icon */
+body.dark-mode .fa-leetcode {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/43/LeetCode_logo_white_no_text.svg');
+}
