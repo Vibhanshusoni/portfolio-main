@@ -4,11 +4,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vibhanshu Soni | Java Backend Developer | Spring Boot Specialist</title>
+    <title>Vibhanshu Soni | Java Backend Developer | Spring Boot & Microservices Engineer</title>
     <meta name="description"
-        content="Backend Developer specializing in Java, Spring Boot, Microservices, and secure REST APIs. Experienced in building scalable backend systems.">
+        content="Vibhanshu Soni — Associate Software Developer specializing in Java, Spring Boot, Microservices, Apache Kafka, Redis, and secure REST APIs. Building scalable, production-grade backend systems.">
     <meta name="keywords"
-        content="Java, Spring Boot, Backend Developer, Microservices, REST APIs, Spring Security, JWT">
+        content="Java, Spring Boot, Backend Developer, Microservices, REST APIs, Spring Security, JWT, Apache Kafka, Redis, PostgreSQL, Docker, Kubernetes">
+    <meta name="author" content="Vibhanshu Soni">
+    <link rel="canonical" href="https://vibhanshusoni.dev/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vibhanshu Soni | Java Backend Developer">
+    <meta property="og:description"
+        content="Associate Software Developer building secure, scalable backend systems with Java, Spring Boot, Microservices, Kafka, and Redis.">
+    <meta property="og:url" content="https://vibhanshusoni.dev/">
 
     <link rel="stylesheet" href="portfolio.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
@@ -16,36 +25,53 @@
 </head>
 
 <body>
+
+    <!-- PAGE LOADER -->
+    <div class="page-loader" aria-hidden="true">
+        <div class="loader-mark">VS</div>
+    </div>
+
+    <!-- SCROLL PROGRESS -->
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
     <!-- ============================================
-         HERO SECTION - PROFESSIONAL & IMPACTFUL
+         HERO SECTION
     ============================================ -->
     <header class="hero-section">
+        <canvas class="hero-bg-canvas" aria-hidden="true"></canvas>
         <div class="hero-content">
             <div class="hero-text">
+                <span class="hero-eyebrow"><span class="dot"></span> Open to Backend Developer roles</span>
                 <h1 class="hero-title">Vibhanshu Soni</h1>
-                <h2 class="hero-subtitle">Backend Developer | Spring Boot Specialist | Microservices Architect</h2>
+                <div class="hero-role-rotator" aria-live="polite">
+                    <span class="role-track">Java Backend Developer</span>
+                </div>
                 <p class="hero-description">
                     Building secure, scalable backend systems that power real-world applications.
-                    Specialized in Java, Spring Boot, REST APIs, and microservices architecture.
+                    Specialized in Java, Spring Boot, Microservices, Apache Kafka, Redis, and REST API architecture.
                 </p>
                 <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    <a href="#projects" class="btn btn-primary">View My Work <span class="btn-arrow">→</span></a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch <span class="btn-arrow">→</span></a>
                     <a href="https://drive.google.com/file/d/1gIXGJHWPV2FXksqi-aw1WrOh8h4v7zD-/view?usp=drive_link"
-                        class="btn btn-resume" target="_blank">Download Resume</a>
+                        class="btn btn-resume" target="_blank">Download Resume <span class="btn-arrow">↓</span></a>
                 </div>
             </div>
             <div class="hero-stats">
                 <div class="stat">
-                    <div class="stat-number">4+</div>
+                    <div class="stat-number" data-count="6">0</div>
                     <div class="stat-label">Production Projects</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-number">1+</div>
+                    <div class="stat-number" data-count="1" data-suffix="+">0</div>
                     <div class="stat-label">Years Experience</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-number">25+</div>
+                    <div class="stat-number" data-count="30" data-suffix="+">0</div>
                     <div class="stat-label">Technical Skills</div>
                 </div>
             </div>
@@ -53,7 +79,7 @@
     </header>
 
     <!-- ============================================
-         NAVIGATION - STICKY & PROFESSIONAL
+         NAVIGATION
     ============================================ -->
     <nav class="navbar">
         <div class="nav-container">
@@ -66,148 +92,239 @@
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="nav-kbd-hint" aria-label="Open quick navigation">
+                <i class="fas fa-search"></i> <span>⌘K</span>
+            </button>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav-backdrop"></div>
+    <div class="mobile-nav-panel">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#github">GitHub</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
     <!-- ============================================
-         ABOUT SECTION - PROFESSIONAL SUMMARY
+         ABOUT SECTION
     ============================================ -->
     <section class="section about-section" id="about" data-aos="fade-up">
         <div class="container">
+            <span class="section-eyebrow">Who I Am</span>
             <h2 class="section-title">Professional Summary</h2>
             <div class="about-content">
                 <p class="about-intro">
-                    <strong>Backend-focused Software Engineer</strong> specializing in building secure, scalable backend
-                    systems using Java, Spring Boot, and microservices architecture.
+                    <strong>Backend-focused Software Engineer</strong> building secure, scalable microservices
+                    systems using Java, Spring Boot, Apache Kafka, and cloud infrastructure. I take ownership of
+                    the backend stack end-to-end — from architecture and REST APIs to deployment and documentation.
                 </p>
 
                 <div class="about-highlights">
-                    <div class="highlight-item">
+                    <div class="highlight-item" data-aos="fade-up" data-aos-delay="0">
                         <i class="fas fa-shield-alt"></i>
                         <h4>Secure Backend Systems</h4>
-                        <p>JWT authentication, OAuth2, Spring Security, RBAC, token validation, secure API design</p>
+                        <p>JWT authentication with refresh token rotation, OAuth2, Spring Security, RBAC, token
+                            blacklisting, rate limiting</p>
                     </div>
-                    <div class="highlight-item">
+                    <div class="highlight-item" data-aos="fade-up" data-aos-delay="80">
                         <i class="fas fa-cube"></i>
                         <h4>Microservices Architecture</h4>
-                        <p>Spring Cloud, Eureka Service Discovery, API Gateway, OpenFeign, inter-service communication
-                        </p>
+                        <p>Spring Cloud, Eureka Service Discovery, API Gateway, OpenFeign, inter-service
+                            communication</p>
                     </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-network-wired"></i>
-                        <h4>REST API Design</h4>
-                        <p>Scalable REST APIs, CRUD operations, API validation, structured error handling, documentation
-                        </p>
+                    <div class="highlight-item" data-aos="fade-up" data-aos-delay="160">
+                        <i class="fas fa-bolt"></i>
+                        <h4>Event-Driven Architecture</h4>
+                        <p>Apache Kafka producers, consumers, topics & partitions, Redis in-memory caching for
+                            high-frequency lookups</p>
                     </div>
-                    <div class="highlight-item">
+                    <div class="highlight-item" data-aos="fade-up" data-aos-delay="240">
                         <i class="fas fa-database"></i>
                         <h4>Database Optimization</h4>
-                        <p>MySQL, Hibernate ORM, query optimization, efficient data retrieval, transaction management
-                        </p>
+                        <p>MySQL, PostgreSQL, Hibernate ORM, query optimization, transaction management</p>
                     </div>
                 </div>
 
                 <p class="about-details">
-                    Currently working as a <strong>Java Backend Developer</strong> at High-Tech Infosystems where I
-                    design and implement production-ready backend services.
-                    Strong foundation in <strong>Data Structures, OOP, and system design</strong>.
-                    Experienced in <strong>debugging, API validation, logging, and modular architecture</strong>.
-                    Passionate about writing clean, maintainable code and contributing to meaningful backend problems.
+                    Currently working as an <strong>Associate Software Developer (Java Backend)</strong> at
+                    High-Tech Infosystems, where I independently own the Candidate Service, Organization Service,
+                    and API Gateway within an enterprise HRIMS microservices platform. I designed an event-driven
+                    architecture using <strong>Apache Kafka</strong> and introduced <strong>Redis</strong> caching to
+                    cut redundant database calls and reduce latency. Strong foundation in
+                    <strong>Data Structures, OOP, and system design</strong>, with hands-on experience in
+                    <strong>Docker, Kubernetes, and Jenkins CI/CD</strong> pipelines. Passionate about writing clean,
+                    maintainable code and solving meaningful backend problems.
                 </p>
             </div>
         </div>
     </section>
 
     <!-- ============================================
-         TECHNICAL SKILLS - ORGANIZED & VISUAL
+         TECHNICAL SKILLS
     ============================================ -->
     <section class="section skills-section" id="skills" data-aos="fade-up">
         <div class="container">
+            <span class="section-eyebrow">Toolbox</span>
             <h2 class="section-title">Technical Skills</h2>
 
+            <div class="skills-filter">
+                <button class="active" data-filter="all">All</button>
+                <button data-filter="languages">Languages</button>
+                <button data-filter="frameworks">Frameworks</button>
+                <button data-filter="architecture">Backend & Architecture</button>
+                <button data-filter="messaging">Messaging & Caching</button>
+                <button data-filter="security">Security</button>
+                <button data-filter="databases">Databases</button>
+                <button data-filter="devops">DevOps & Cloud</button>
+                <button data-filter="tools">Tools & QA</button>
+            </div>
+
             <div class="skills-categories">
-                <div class="skill-category" data-aos="fade-right">
-                    <h3>Languages</h3>
+                <div class="skill-category" data-category="languages" data-aos="fade-right">
+                    <h3><i class="fas fa-code"></i> Languages</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Core Java</span>
-                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag"
+                            data-tip="Primary language for all backend development, including Core Java, OOP, Collections, and Java 8 Streams/Lambdas.">Java</span>
+                        <span class="skill-tag"
+                            data-tip="Deep experience with Core Java fundamentals and multithreading.">Core Java</span>
+                        <span class="skill-tag"
+                            data-tip="Used for schema design and writing optimized queries.">SQL</span>
                     </div>
                 </div>
 
-                <div class="skill-category" data-aos="fade-right">
-                    <h3>Frameworks & Libraries</h3>
+                <div class="skill-category" data-category="frameworks" data-aos="fade-right">
+                    <h3><i class="fas fa-layer-group"></i> Frameworks & Libraries</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag featured">Spring Boot</span>
-                        <span class="skill-tag featured">Spring Security</span>
-                        <span class="skill-tag">Spring MVC</span>
-                        <span class="skill-tag">Spring Cloud</span>
-                        <span class="skill-tag">Hibernate</span>
+                        <span class="skill-tag featured"
+                            data-tip="Used for building production-ready REST APIs and microservices.">Spring
+                            Boot</span>
+                        <span class="skill-tag featured"
+                            data-tip="Handles JWT/OAuth2 authentication, RBAC, and route protection.">Spring
+                            Security</span>
+                        <span class="skill-tag" data-tip="Powers REST controller design across all services.">Spring
+                            MVC</span>
+                        <span class="skill-tag"
+                            data-tip="Eureka, API Gateway, and OpenFeign for microservices communication.">Spring
+                            Cloud</span>
+                        <span class="skill-tag" data-tip="Data access layer for MySQL/PostgreSQL persistence.">Spring
+                            Data JPA</span>
+                        <span class="skill-tag"
+                            data-tip="ORM layer for entity mapping and query optimization.">Hibernate</span>
                     </div>
                 </div>
 
-                <div class="skill-category" data-aos="fade-right">
-                    <h3>Backend & Architecture</h3>
+                <div class="skill-category" data-category="architecture" data-aos="fade-right">
+                    <h3><i class="fas fa-diagram-project"></i> Backend & Architecture</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag featured">REST APIs</span>
-                        <span class="skill-tag featured">Microservices</span>
-                        <span class="skill-tag">Layered Architecture</span>
-                        <span class="skill-tag">DTO Pattern</span>
-                        <span class="skill-tag">JDBC</span>
-                        <span class="skill-tag">Web Services</span>
+                        <span class="skill-tag featured"
+                            data-tip="Designed and documented across every production service.">REST APIs</span>
+                        <span class="skill-tag featured"
+                            data-tip="Independently owned multiple services within an HRIMS microservices ecosystem.">Microservices</span>
+                        <span class="skill-tag" data-tip="Used to keep services modular and maintainable.">Layered
+                            Architecture</span>
+                        <span class="skill-tag" data-tip="Standard pattern for clean, standardized JSON responses.">DTO
+                            Pattern</span>
+                        <span class="skill-tag"
+                            data-tip="Service registration and discovery for inter-service calls.">Eureka</span>
+                        <span class="skill-tag"
+                            data-tip="Declarative REST clients for service-to-service communication.">OpenFeign</span>
+                        <span class="skill-tag" data-tip="Central routing and JWT validation layer.">API Gateway</span>
                     </div>
                 </div>
 
-                <div class="skill-category" data-aos="fade-right">
-                    <h3>Security & Authentication</h3>
+                <div class="skill-category" data-category="messaging" data-aos="fade-left">
+                    <h3><i class="fas fa-tower-broadcast"></i> Messaging & Caching</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag featured">JWT</span>
-                        <span class="skill-tag featured">OAuth2</span>
-                        <span class="skill-tag">RBAC</span>
-                        <span class="skill-tag">Token Validation</span>
-                        <span class="skill-tag">Secure Authentication</span>
+                        <span class="skill-tag featured"
+                            data-tip="Producers, consumers, topics, partitions & consumer groups for async, event-driven communication.">Apache
+                            Kafka</span>
+                        <span class="skill-tag"
+                            data-tip="Used to decouple services and process events asynchronously.">Event-Driven
+                            Architecture</span>
+                        <span class="skill-tag featured"
+                            data-tip="In-memory caching layer for frequently accessed candidate/organization data, cutting DB load.">Redis</span>
+                        <span class="skill-tag"
+                            data-tip="Combined Kafka streams with caching to reduce redundant database calls.">Kafka-Backed
+                            Caching</span>
                     </div>
                 </div>
 
-                <div class="skill-category" data-aos="fade-left">
-                    <h3>Databases</h3>
+                <div class="skill-category" data-category="security" data-aos="fade-left">
+                    <h3><i class="fas fa-lock"></i> Security & Authentication</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag featured">MySQL</span>
-                        <span class="skill-tag">Relational Databases</span>
-                        <span class="skill-tag">Query Optimization</span>
+                        <span class="skill-tag featured"
+                            data-tip="Refresh token rotation, blacklisting/revocation, and custom claims.">JWT</span>
+                        <span class="skill-tag featured"
+                            data-tip="Social login integration with Google and GitHub.">OAuth2</span>
+                        <span class="skill-tag"
+                            data-tip="Granular role-based permissions for Admin/User workflows.">RBAC</span>
+                        <span class="skill-tag" data-tip="Applied to authentication endpoints to prevent abuse.">Rate
+                            Limiting</span>
+                        <span class="skill-tag" data-tip="Short-lived access tokens validated on every request.">Token
+                            Validation</span>
                     </div>
                 </div>
 
-                <div class="skill-category" data-aos="fade-left">
-                    <h3>Testing & API Tools</h3>
+                <div class="skill-category" data-category="databases" data-aos="fade-left">
+                    <h3><i class="fas fa-database"></i> Databases</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">JUnit</span>
-                        <span class="skill-tag">Postman</span>
-                        <span class="skill-tag">Integration Testing</span>
-                        <span class="skill-tag">API Validation</span>
+                        <span class="skill-tag featured"
+                            data-tip="Primary relational database across most projects.">MySQL</span>
+                        <span class="skill-tag featured"
+                            data-tip="Used for HRIMS platform data including bulk import workflows.">PostgreSQL</span>
+                        <span class="skill-tag"
+                            data-tip="Low-level database connectivity for custom queries.">JDBC</span>
+                        <span class="skill-tag"
+                            data-tip="Improved API response times through indexing and query tuning.">Query
+                            Optimization</span>
                     </div>
                 </div>
 
-                <div class="skill-category" data-aos="fade-left">
-                    <h3>DevOps & Tools</h3>
+                <div class="skill-category" data-category="devops" data-aos="fade-left">
+                    <h3><i class="fas fa-cloud"></i> DevOps & Cloud</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Git & GitHub</span>
-                        <span class="skill-tag">Maven</span>
-                        <span class="skill-tag">CI/CD Basics</span>
-                        <span class="skill-tag">Jira</span>
+                        <span class="skill-tag featured"
+                            data-tip="Containerizes microservices for consistent deployment.">Docker</span>
+                        <span class="skill-tag"
+                            data-tip="Collaborated on container orchestration and deployments.">Kubernetes</span>
+                        <span class="skill-tag"
+                            data-tip="Supported build/release pipelines for reliable delivery.">Jenkins CI/CD</span>
+                        <span class="skill-tag"
+                            data-tip="Deployed and hosted backend services on EC2; stored files on S3.">AWS (EC2,
+                            S3)</span>
+                        <span class="skill-tag"
+                            data-tip="Integrated Directions API and Gmail API into backend services.">GCP APIs</span>
                     </div>
                 </div>
 
-                <div class="skill-category" data-aos="fade-left">
-                    <h3>Cloud & Core CS</h3>
+                <div class="skill-category" data-category="tools" data-aos="fade-left">
+                    <h3><i class="fas fa-toolbox"></i> Tools & QA</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">AWS Basics</span>
-                        <span class="skill-tag">Data Structures</span>
-                        <span class="skill-tag">Algorithms</span>
-                        <span class="skill-tag">OOP</span>
-                        <span class="skill-tag">Multithreading</span>
-                        <span class="skill-tag">SDLC</span>
+                        <span class="skill-tag" data-tip="Version control across all personal and team projects.">Git &
+                            GitHub</span>
+                        <span class="skill-tag" data-tip="Build automation and dependency management.">Maven</span>
+                        <span class="skill-tag" data-tip="API testing and request validation.">Postman</span>
+                        <span class="skill-tag"
+                            data-tip="API documentation maintained at 100% coverage across services.">Swagger/OpenAPI</span>
+                        <span class="skill-tag"
+                            data-tip="Unit and regression testing to minimize production defects.">JUnit</span>
+                        <span class="skill-tag" data-tip="Sprint planning and task tracking in Agile teams.">Jira</span>
+                        <span class="skill-tag"
+                            data-tip="Foundational problem-solving skills applied across every project.">Data Structures
+                            & Algorithms</span>
+                        <span class="skill-tag" data-tip="Multithreading, exception handling, and clean OOP design.">OOP
+                            & Multithreading</span>
                     </div>
                 </div>
             </div>
@@ -215,16 +332,108 @@
     </section>
 
     <!-- ============================================
-         FEATURED PROJECTS - SHOWCASE YOUR BEST WORK
+         FEATURED PROJECTS
     ============================================ -->
     <section class="section projects-section" id="projects" data-aos="fade-up">
         <div class="container">
+            <span class="section-eyebrow">Selected Work</span>
             <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">Real production-grade backend systems demonstrating expertise in microservices,
-                security, and scalable API design</p>
+            <p class="section-subtitle">Real production-grade backend systems demonstrating expertise in
+                microservices, event-driven architecture, security, and scalable API design. Click a card to explore
+                the full case study.</p>
 
+            <!-- CURRENT COMPANY PROJECT 00 — HRIMS -->
+            <div class="project-card internal-project featured-project" data-aos="fade-up" data-project="hrims">
+
+                <div class="project-num">00</div>
+
+                <div class="project-badge">Current @ High-Tech Infosystems</div>
+
+                <div class="project-header">
+                    <h3>HRIMS — Human Resource Information Management System</h3>
+                </div>
+
+                <p class="project-duration">
+                    <i class="fas fa-calendar"></i>
+                    2026 – Present |
+                    <span class="duration-badge">In Progress</span>
+                </p>
+
+                <div class="tech-stack">
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>Microservices</span>
+                    <span>Apache Kafka</span>
+                    <span>Redis</span>
+                    <span>JWT</span>
+                    <span>PostgreSQL</span>
+                    <span>Docker</span>
+                    <span>Kubernetes</span>
+                    <span>Jenkins</span>
+                </div>
+
+                <div class="project-description">
+                    <p>
+                        Enterprise HR management platform built around
+                        microservices, event-driven communication, secure
+                        authentication, and distributed caching.
+                    </p>
+                </div>
+
+                <div class="internal-tag">
+                    <i class="fas fa-lock"></i>
+                    Internal enterprise platform — access requires company authentication
+                </div>
+
+            </div>
+
+
+            <!-- CURRENT COMPANY PROJECT 01 — BROADCHAT -->
+            <div class="project-card internal-project featured-project" data-aos="fade-up" data-project="broadchat">
+
+                <div class="project-num">01</div>
+
+                <div class="project-badge">Current @ High-Tech Infosystems</div>
+
+                <div class="project-header">
+                    <h3>BroadChat</h3>
+                </div>
+
+                <p class="project-duration">
+                    <i class="fas fa-calendar"></i>
+                    2026 – Present |
+                    <span class="duration-badge">In Progress</span>
+                </p>
+
+                <div class="tech-stack">
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>Microservices</span>
+                    <span>Redis</span>
+                    <span>JWT</span>
+                    <span>PostgreSQL</span>
+                    <span>Docker</span>
+                    <span>Kubernetes</span>
+                    <span>Jenkins</span>
+                </div>
+
+                <div class="project-description">
+                    <p>
+                        Enterprise backend development for BroadChat,
+                        contributing to scalable and secure backend services
+                        at High-Tech Infosystems.
+                    </p>
+                </div>
+
+                <div class="internal-tag">
+                    <i class="fas fa-lock"></i>
+                    Internal enterprise platform — access requires company authentication
+                </div>
+
+            </div>
             <!-- PROJECT 1 -->
-            <div class="project-card featured-project" data-aos="fade-up">
+            <div class="project-card featured-project" data-aos="fade-up" data-project="college-management">
+                <div class="project-num">02</div>
                 <div class="project-badge">Featured</div>
                 <div class="project-header">
                     <h3>College Management System</h3>
@@ -252,31 +461,25 @@
                 </div>
 
                 <div class="project-description">
-                    <p><strong>Complete backend implementation of a microservices-based College Management
+                    <p><strong>Collaborative backend implementation of a microservices-based College Management
                             System</strong> handling 8+ domain services with production-ready architecture.</p>
                 </div>
 
                 <ul class="project-highlights">
                     <li><strong>Microservices Architecture:</strong> Designed and implemented 8+ independent services
                         (auth, users, courses, faculty, students, attendance, library, departments)</li>
-                    <li><strong>Secure Authentication:</strong> JWT-based authentication with role-based access control
-                        for Admin, Faculty, Student, and Librarian workflows</li>
-                    <li><strong>Service Communication:</strong> Implemented API Gateway routing, Eureka service
-                        discovery, and OpenFeign for inter-service communication</li>
-                    <li><strong>API Design:</strong> Built 15+ secure REST APIs with validation, standardized responses,
-                        and centralized exception handling</li>
-                    <li><strong>Documentation:</strong> 100% API documentation using Swagger/OpenAPI, enabling seamless
-                        frontend integration</li>
-                    <li><strong>Data Management:</strong> MySQL database with Hibernate ORM, transactional integrity,
-                        soft delete, and audit fields</li>
-                    <li><strong>DevOps:</strong> Containerized with Docker and integrated into CI/CD pipeline</li>
-                    <li><strong>Result:</strong> Production-ready system handling multiple user roles with zero security
-                        incidents</li>
+                    <li><strong>Secure Authentication:</strong> JWT-based authentication with role-based access
+                        control for Admin, Faculty, Student, and Librarian workflows</li>
+                    <li><strong>Service Communication:</strong> Configured Eureka Service Discovery and OpenFeign
+                        declarative clients, secured via API Gateway with JWT validation</li>
+                    <li><strong>Documentation:</strong> 100% API documentation using Swagger/OpenAPI</li>
                 </ul>
+                <span class="project-expand-hint"><i class="fas fa-expand"></i> View full case study</span>
             </div>
 
             <!-- PROJECT 2 -->
-            <div class="project-card featured-project" data-aos="fade-up">
+            <div class="project-card featured-project" data-aos="fade-up" data-project="employee-management">
+                <div class="project-num">03</div>
                 <div class="project-badge">Security Focus</div>
                 <div class="project-header">
                     <h3>Employee Management System - Secure Backend API</h3>
@@ -302,30 +505,25 @@
                 </div>
 
                 <div class="project-description">
-                    <p><strong>Production-grade secure backend</strong> demonstrating modern authentication patterns and
-                        enterprise-level security practices.</p>
+                    <p><strong>Production-grade secure backend</strong> demonstrating modern authentication patterns
+                        and enterprise-level security practices.</p>
                 </div>
 
                 <ul class="project-highlights">
-                    <li><strong>Advanced Authentication:</strong> Implemented JWT with refresh token rotation, secure
-                        logout, and token blacklisting</li>
-                    <li><strong>Social Login:</strong> OAuth2 integration with Google and GitHub for seamless user
-                        authentication</li>
-                    <li><strong>Account Security:</strong> Login attempt tracking, temporary account lock (5 failed
-                        attempts), and admin-initiated permanent blocking</li>
-                    <li><strong>Access Control:</strong> Role-Based Access Control (RBAC) for ADMIN and USER roles with
-                        granular permissions</li>
-                    <li><strong>API Security:</strong> Input validation, structured error responses, centralized
-                        exception handling</li>
-                    <li><strong>REST APIs:</strong> Employee CRUD operations, admin dashboard, user management with
-                        clean API contracts</li>
-                    <li><strong>Database:</strong> MySQL with Hibernate ORM for secure data persistence</li>
-                    <li><strong>Result:</strong> Zero security breaches, handles 100+ daily transactions securely</li>
+                    <li><strong>Advanced Authentication:</strong> JWT with refresh token rotation, secure logout, and
+                        token blacklisting</li>
+                    <li><strong>Social Login:</strong> OAuth2 integration with Google and GitHub</li>
+                    <li><strong>Account Security:</strong> Login attempt tracking, temporary and admin-initiated
+                        account locking</li>
+                    <li><strong>Result:</strong> Zero security breaches, handles 100+ daily transactions securely
+                    </li>
                 </ul>
+                <span class="project-expand-hint"><i class="fas fa-expand"></i> View full case study</span>
             </div>
 
             <!-- PROJECT 3 -->
-            <div class="project-card" data-aos="fade-up">
+            <div class="project-card" data-aos="fade-up" data-project="user-product-microservices">
+                <div class="project-num">04</div>
                 <div class="project-header">
                     <h3>User-Product Microservices System</h3>
                     <div class="project-links">
@@ -352,18 +550,16 @@
                 <ul class="project-highlights">
                     <li><strong>Distributed System:</strong> Engineered 5+ microservices using Spring Cloud, Eureka
                         Service Discovery, and API Gateway</li>
-                    <li><strong>Authentication Service:</strong> JWT validation, OTP verification, secure password reset
-                        workflows</li>
-                    <li><strong>Modular Services:</strong> User and Product services with REST APIs and MySQL
-                        persistence</li>
-                    <li><strong>Architecture:</strong> Monorepo structure for efficient service registration and
-                        development workflows</li>
+                    <li><strong>Authentication Service:</strong> JWT validation, OTP verification, secure password
+                        reset workflows</li>
                     <li><strong>Result:</strong> Scalable system demonstrating real microservices patterns</li>
                 </ul>
+                <span class="project-expand-hint"><i class="fas fa-expand"></i> View full case study</span>
             </div>
 
             <!-- PROJECT 4 -->
-            <div class="project-card" data-aos="fade-up">
+            <div class="project-card" data-aos="fade-up" data-project="eco-route-planner">
+                <div class="project-num">05</div>
                 <div class="project-header">
                     <h3>Eco Route Planner Backend</h3>
                     <div class="project-links">
@@ -381,35 +577,77 @@
                     <span>Java</span>
                     <span>Spring Boot</span>
                     <span>Spring Security</span>
-                    <span>Google Maps API</span>
+                    <span>Google Directions API</span>
+                    <span>Gmail API</span>
                     <span>MySQL</span>
                 </div>
 
                 <ul class="project-highlights">
-                    <li><strong>Secure REST APIs:</strong> Spring Boot with Spring Security for authenticated requests
-                    </li>
-                    <li><strong>API Integration:</strong> Google Maps API integration for route optimization (30% faster
-                        computation)</li>
+                    <li><strong>Secure REST APIs:</strong> Spring Boot with Spring Security for authenticated
+                        requests</li>
+                    <li><strong>API Integration:</strong> Google Directions API for route optimization (~30% faster
+                        computation) and Gmail API for notifications</li>
                     <li><strong>Architecture:</strong> DTO pattern, layered architecture, modular design</li>
-                    <li><strong>Quality:</strong> Comprehensive API validation, logging, debugging, and error handling
-                    </li>
                 </ul>
+                <span class="project-expand-hint"><i class="fas fa-expand"></i> View full case study</span>
+            </div>
+
+            <!-- PROJECT 5 -->
+            <div class="project-card" data-aos="fade-up" data-project="doctor-patient">
+                <div class="project-num">06</div>
+                <div class="project-header">
+                    <h3>Doctor-Patient Management System</h3>
+                    <div class="project-links">
+                        <a href="https://github.com/Vibhanshusoni" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> GitHub Profile
+                        </a>
+                    </div>
+                </div>
+
+                <p class="project-duration"><i class="fas fa-calendar"></i> <span class="duration-badge">Solo-deployed
+                        project</span></p>
+
+                <div class="tech-stack">
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>Spring Security</span>
+                    <span>MySQL</span>
+                    <span>AWS EC2</span>
+                    <span>AWS S3</span>
+                </div>
+
+                <ul class="project-highlights">
+                    <li><strong>Full-Stack Backend:</strong> Appointment booking, patient records, and prescriptions
+                    </li>
+                    <li><strong>Cloud Deployment:</strong> Solo-deployed on an AWS EC2 instance</li>
+                    <li><strong>File Storage:</strong> AWS S3 used to store patient documents, prescriptions, and
+                        profile images</li>
+                </ul>
+                <span class="project-expand-hint"><i class="fas fa-expand"></i> View full case study</span>
             </div>
         </div>
     </section>
 
+    <!-- PROJECT MODAL -->
+    <div class="project-modal-overlay">
+        <div class="project-modal" role="dialog" aria-modal="true"></div>
+    </div>
+
     <!-- ============================================
-         PROFESSIONAL EXPERIENCE - DETAILED & IMPACTFUL
+         PROFESSIONAL EXPERIENCE
     ============================================ -->
     <section class="section experience-section" id="experience" data-aos="fade-up">
         <div class="container">
+            <span class="section-eyebrow">Career Path</span>
             <h2 class="section-title">Professional Experience</h2>
 
             <div class="experience-timeline">
+                <div class="timeline-fill"></div>
+
                 <!-- CURRENT ROLE -->
                 <div class="experience-card current-role" data-aos="fade-right">
                     <div class="exp-header">
-                        <h3>Java Backend Developer</h3>
+                        <h3>Associate Software Developer (Java Backend)</h3>
                         <span class="exp-status">CURRENT</span>
                     </div>
                     <p class="exp-company"><i class="fas fa-building"></i> High-Tech Infosystems, Jabalpur</p>
@@ -418,42 +656,77 @@
                     </p>
 
                     <ul class="exp-highlights">
-                        <li><strong>Backend Architecture:</strong> Develop production-ready services using Java and
-                            Spring Boot with layered architecture</li>
-                        <li><strong>Secure Authentication:</strong> Design JWT/OAuth2 authentication mechanisms with
-                            Spring Security and role-based access control</li>
-                        <li><strong>Scalable APIs:</strong> Build secure REST APIs supporting CRUD operations,
-                            validation, and authorization</li>
-                        <li><strong>Database Optimization:</strong> MySQL integration with Hibernate ORM and optimized
-                            query design</li>
-                        <li><strong>API Documentation:</strong> Maintain 100% API documentation with Swagger/OpenAPI for
-                            seamless team integration</li>
-                        <li><strong>Testing & Quality:</strong> API testing with Postman, unit testing with JUnit, and
-                            integration testing</li>
-                        <li><strong>DevOps & Collaboration:</strong> Docker containerization, Git version control, CI/CD
-                            participation, Agile practices</li>
+                        <li><strong>Backend Architecture:</strong> Develop and maintain scalable RESTful APIs and
+                            microservices using Core Java, Spring Boot, Spring Data JPA, and Hibernate</li>
+                        <li><strong>Event-Driven Systems:</strong> Designed event-driven architecture with Apache
+                            Kafka (producers, consumers, topics, partitions) for async communication across HRIMS
+                            microservices</li>
+                        <li><strong>Caching Layer:</strong> Introduced Redis as an in-memory caching layer for
+                            candidate/organization lookups, reducing database load and improving response times</li>
+                        <li><strong>Secure Authentication:</strong> Built an advanced JWT system with refresh token
+                            rotation, token blacklisting/revocation, custom claims, and rate limiting</li>
+                        <li><strong>Service Ownership:</strong> Independently own the Candidate Service, Organization
+                            Service, and API Gateway within the HRIMS microservices ecosystem</li>
+                        <li><strong>Databases:</strong> Work with MySQL and PostgreSQL via Hibernate ORM and Spring
+                            Data JPA; wrote a bulk import feature for large-scale employee onboarding</li>
+                        <li><strong>DevOps & Collaboration:</strong> Docker containerization, Kubernetes deployment
+                            collaboration, Jenkins CI/CD pipelines, Agile sprint workflows</li>
+                    </ul>
+                </div>
+
+                <!-- SELF-EMPLOYED -->
+                <div class="experience-card" data-aos="fade-left">
+                    <div class="exp-header">
+                        <h3>Java Backend Developer — Self-Employed</h3>
+                    </div>
+                    <p class="exp-company"><i class="fas fa-building"></i> Freelance / Personal Projects</p>
+                    <p class="exp-duration"><i class="fas fa-calendar"></i> Jan 2025 – Jan 2026 | <strong>1 year 1
+                            month</strong></p>
+
+                    <ul class="exp-highlights">
+                        <li>Built backend applications and REST APIs using Java and Spring Boot across personal and
+                            freelance projects</li>
+                        <li>Worked on API design, database integration, and authentication</li>
+                        <li>Actively improved skills in backend architecture, debugging, and performance
+                            optimization</li>
                     </ul>
                 </div>
 
                 <!-- INTERNSHIP -->
-                <div class="experience-card" data-aos="fade-left">
+                <div class="experience-card" data-aos="fade-right">
                     <div class="exp-header">
-                        <h3>Project Management Associate - Intern</h3>
+                        <h3>Project Management Associate — Intern</h3>
                     </div>
                     <p class="exp-company"><i class="fas fa-building"></i> Excelerate | Remote</p>
                     <p class="exp-duration"><i class="fas fa-calendar"></i> Oct 2024 – Dec 2024 | <strong>3
                             months</strong></p>
 
                     <ul class="exp-highlights">
-                        <li>Participated in full SDLC cycle: planning, development, debugging, testing, deployment
-                            readiness, documentation</li>
+                        <li>Contributed to the full SDLC cycle: planning, development, debugging, testing,
+                            deployment readiness, documentation</li>
                         <li>Engineered API documentation for multiple Spring Boot microservices achieving 100%
                             compliance</li>
-                        <li>Improved backend integration efficiency by 18% through systematic debugging and performance
-                            optimization</li>
-                        <li>Supported deployment activities and post-deployment verification ensuring system stability
+                        <li>Improved backend integration efficiency by ~18% through systematic debugging and
+                            performance optimization</li>
+                        <li>Reduced API integration time by ~20% through clearer documentation and communication
                         </li>
-                        <li>Collaborated across 3 Agile projects improving task tracking by 15% using Jira</li>
+                    </ul>
+                </div>
+
+                <!-- CODSOFT -->
+                <div class="experience-card" data-aos="fade-left">
+                    <div class="exp-header">
+                        <h3>Application Developer — CodSoft</h3>
+                    </div>
+                    <p class="exp-company"><i class="fas fa-building"></i> CodSoft | Remote</p>
+                    <p class="exp-duration"><i class="fas fa-calendar"></i> Oct 2024 – Nov 2024 | <strong>2
+                            months</strong></p>
+
+                    <ul class="exp-highlights">
+                        <li>Developed 4 Android applications using Kotlin, XML, and Firebase</li>
+                        <li>Implemented user input handling, Firebase integration, and core app workflows</li>
+                        <li>Applied OOP principles and Agile practices to deliver functional apps within deadlines
+                        </li>
                     </ul>
                 </div>
 
@@ -467,12 +740,10 @@
                             months</strong></p>
 
                     <ul class="exp-highlights">
-                        <li>Documented legacy Java system architecture, improving technical reporting accuracy by 20%
-                        </li>
-                        <li>Analyzed legacy systems and identified 5+ modernization opportunities reducing manual
-                            workload by 15%</li>
+                        <li>Documented legacy Java system architecture, improving technical reporting accuracy by
+                            20%</li>
+                        <li>Identified 5+ modernization opportunities, reducing manual workload by ~15%</li>
                         <li>Supported backend automation and system validation for defence-grade applications</li>
-                        <li>Gained hands-on SDLC exposure and real-world application debugging experience</li>
                     </ul>
                 </div>
             </div>
@@ -480,10 +751,11 @@
     </section>
 
     <!-- ============================================
-         EDUCATION - CONCISE & PROFESSIONAL
+         EDUCATION
     ============================================ -->
     <section class="section education-section" id="education" data-aos="fade-up">
         <div class="container">
+            <span class="section-eyebrow">Academics</span>
             <h2 class="section-title">Education</h2>
 
             <div class="education-card" data-aos="fade-right">
@@ -492,13 +764,13 @@
                 </div>
                 <div class="edu-content">
                     <h3>Bachelor of Technology (B.Tech) - Computer Science Engineering</h3>
-                    <p class="edu-institution">Baderia Global Institute of Engineering and Management, Jabalpur, Madhya
-                        Pradesh</p>
+                    <p class="edu-institution">Baderia Global Institute of Engineering and Management, Jabalpur,
+                        Madhya Pradesh</p>
                     <p class="edu-duration"><i class="fas fa-calendar"></i> Nov 2021 – May 2025</p>
-                    <p class="edu-gpa"><strong>GPA: 7.26/10</strong></p>
+                    <p class="edu-gpa"><strong>Aggregate: 72.6% (7.26/10 CGPA) · No Backlogs / Arrears</strong></p>
                     <p class="edu-activities">
                         <strong>Activities:</strong> Participated in hackathons, youth fest, and technical events.
-                        Developed strong foundation in Data Structures, Algorithms, OOP, and software engineering
+                        Developed a strong foundation in Data Structures, Algorithms, OOP, and software engineering
                         practices.
                     </p>
                 </div>
@@ -507,10 +779,11 @@
     </section>
 
     <!-- ============================================
-         CERTIFICATIONS - CREDENTIALS & CREDIBILITY
+         CERTIFICATIONS
     ============================================ -->
     <section class="section certifications-section" id="certifications" data-aos="fade-up">
         <div class="container">
+            <span class="section-eyebrow">Credentials</span>
             <h2 class="section-title">Certifications & Credentials</h2>
 
             <div class="certificates-grid">
@@ -537,17 +810,37 @@
                     <h4>Android Developer Certification</h4>
                     <p class="cert-issuer">Micro1 Certified | Jul 2025</p>
                 </div>
+
+                <div class="cert-card" data-aos="zoom-in">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h4>AWS APAC Solutions Architecture Job Simulation</h4>
+                    <p class="cert-issuer">Forage / AWS APAC</p>
+                </div>
+
+                <div class="cert-card" data-aos="zoom-in">
+                    <div class="cert-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h4>Hackfest 4.0 — Participant</h4>
+                    <p class="cert-issuer">Hackathon</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ============================================
-         CONTACT SECTION - CLEAR CALLS TO ACTION
+         CONTACT SECTION
     ============================================ -->
     <section class="section contact-section" id="contact" data-aos="fade-up">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">I'm actively seeking Backend Developer opportunities. Let's connect!</p>
+            <div class="contact-headline">
+                <p class="cta-line1">Have a backend problem worth solving?</p>
+                <p class="cta-line2">Let's talk.</p>
+            </div>
+            <p class="section-subtitle">I'm actively seeking Backend Developer / Software Engineer opportunities —
+                on-site, hybrid, or remote, in India or globally.</p>
 
             <div class="contact-content">
                 <div class="contact-methods">
@@ -557,7 +850,7 @@
                         <p><a href="tel:+918827947091">+91 88279 47091</a></p>
                     </div>
 
-                   <div class="contact-card" data-aos="fade-right" onclick="copyEmail()" style="cursor: pointer;">
+                    <div class="contact-card" data-aos="fade-right" onclick="copyEmail()" style="cursor: pointer;">
                         <i class="fas fa-envelope"></i>
                         <h4>Email</h4>
                         <p id="emailText">vibhanshusoniofficial@gmail.com</p>
@@ -573,7 +866,8 @@
                     <div class="contact-card" data-aos="fade-left">
                         <i class="fab fa-github"></i>
                         <h4>GitHub</h4>
-                        <p><a href="https://github.com/Vibhanshusoni" target="_blank">github.com/Vibhanshusoni</a></p>
+                        <p><a href="https://github.com/Vibhanshusoni" target="_blank">github.com/Vibhanshusoni</a>
+                        </p>
                     </div>
                 </div>
 
@@ -586,69 +880,78 @@
                     </a>
                     <a href="mailto:vibhanshusoniofficial@gmail.com" class="social-btn">
                         <i class="fas fa-envelope"></i> Email
-                        <!-- </a>
-                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/leetcode.svg"
-                        class="leetcode-icon">
-
-                    <strong>LeetCode:</strong>
-                    <a href="https://leetcode.com/u/vibhanshu_soni" target="_blank">
-                        leetcode.com/u/vibhanshu_soni
-                    </a> -->
-
-                        <a href="https://leetcode.com/u/vibhanshu_soni" target="_blank" class="social-btn">
-                            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/leetcode.svg"
-                                class="leetcode-icon leetcode-icon-teal" alt="LeetCode Logo">
-                            LeetCode
-                        </a>
+                    </a>
+                    <a href="https://leetcode.com/u/vibhanshu_soni" target="_blank" class="social-btn">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/leetcode.svg"
+                            class="leetcode-icon leetcode-icon-teal" alt="LeetCode Logo">
+                        LeetCode
+                    </a>
+                    <a href="https://drive.google.com/file/d/1gIXGJHWPV2FXksqi-aw1WrOh8h4v7zD-/view?usp=drive_link"
+                        target="_blank" class="social-btn">
+                        <i class="fas fa-file-arrow-down"></i> Resume
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ============================================
-         GITHUB STATS - SOCIAL PROOF
+         GITHUB / LEETCODE ACTIVITY DASHBOARD
     ============================================ -->
     <section class="section github-section" id="github" data-aos="fade-up">
         <div class="container">
-            <h2 class="section-title">GitHub Activity</h2>
+            <span class="section-eyebrow">Consistency</span>
+            <h2 class="section-title">Developer Activity Dashboard</h2>
+            <p class="section-subtitle">Live GitHub and LeetCode activity — updated automatically and rendered in the
+                active theme.</p>
 
-            <!-- <div class="github-stats">
-                <img loading="lazy"
-                    src="https://github-readme-stats.vercel.app/api?username=Vibhanshusoni&show_icons=true&theme=tokyonight&v=2"
-                    alt="GitHub Stats" />
-                <img src="https://github-readme-streak-stats.herokuapp.com/?user=Vibhanshusoni&theme=tokyonight"
-                    alt="GitHub Streak" class="github-stat-image" />
-                    <img src="https://leetcard.jacoblin.cool/vibhanshu_soni?theme=dark&ext=contest" />
-            </div> -->
             <div class="github-grid">
-
                 <div class="card">
-                    <img src="https://streak-stats.demolab.com?user=Vibhanshusoni&theme=tokyonight">
+                    <img src="https://streak-stats.demolab.com?user=Vibhanshusoni&theme=tokyonight" alt="GitHub Streak">
                 </div>
-
                 <div class="card">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png">
+                    <img src="https://streak-stats.demolab.com?user=vibhanshu054&theme=tokyonight" alt="GitHub Streak">
+                </div>
+                <div class="card">
+                    <img src="https://leetcard.jacoblin.cool/vibhanshu_soni?theme=dark&ext=contest"
+                        alt="LeetCode Stats">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ============================================
-         FOOTER - PROFESSIONAL & MINIMAL
+         FOOTER
     ============================================ -->
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2026 Vibhanshu Soni | Backend Developer</p>
-            <p class="footer-subtitle">Building secure, scalable backend systems | Let's build something amazing
+            <p>&copy; 2026 Vibhanshu Soni | Java Backend Developer</p>
+            <div class="footer-links">
+                <a href="https://github.com/Vibhanshusoni" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/vibhanshusoni98" target="_blank">LinkedIn</a>
+                <a href="https://leetcode.com/u/vibhanshu_soni" target="_blank">LeetCode</a>
+                <a href="mailto:vibhanshusoniofficial@gmail.com">Email</a>
+            </div>
+            <p class="footer-subtitle">Building secure, scalable backend systems | Let's build something meaningful
                 together</p>
         </div>
     </footer>
 
     <!-- ============================================
+         COMMAND PALETTE
+    ============================================ -->
+    <div class="cmdk-overlay">
+        <div class="cmdk-box" role="dialog" aria-label="Quick navigation">
+            <input type="text" class="cmdk-input" placeholder="Search portfolio..." aria-label="Search portfolio">
+            <ul class="cmdk-list"></ul>
+        </div>
+    </div>
+
+    <!-- ============================================
          UTILITY BUTTONS
     ============================================ -->
     <button class="toggle-darkmode" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">🌓</button>
-    <button class="back-to-top" aria-label="Back to top" title="Back to Top">↑</button>
+    <button class="back-to-top" aria-label="Back to top" title="Back to Top"><span class="arrow-icon">↑</span></button>
 
     <!-- ============================================
          SCRIPTS
